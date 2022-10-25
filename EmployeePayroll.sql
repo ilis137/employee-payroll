@@ -32,7 +32,6 @@ insert into employee_payroll_table
  describe employee_payroll_table;
  
  update employee_payroll_table set gender='M' where name='Bill' or name='charlie';
- 
  update employee_payroll_table set gender='F' where name='Teresa';
  
  select * from employee_payroll_table;
@@ -47,4 +46,10 @@ insert into employee_payroll_table
    alter table employee_payroll_table add basic_pay double,add deductions double,add taxable_pay double,add income_tax double,add net_pay double after salary;
    alter table employee_payroll_table drop column salary;
    describe employee_payroll_table;
+   
+   
+   UPDATE employee_payroll_table SET department = 'Sales' where name = 'Teresa';
+   INSERT INTO employee_payroll_table (name, department, gender, basic_pay, deductions, taxable_pay, income_tax, net_pay, start_date) VALUES('Terisa', 'sales', 'F', 300000.00, 100000.00, 50000.00, 50000.00, 100000.00, '2018-02-06');
+   select * from employee_payroll_table where name='terisa';
+   
    
