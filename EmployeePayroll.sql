@@ -43,3 +43,6 @@ insert into employee_payroll_table
   
   describe employee_payroll_table;
   select * from employee_payroll_table;
+  
+   alter table employee_payroll_table add basic_pay double,add deductions double,add taxable_pay double,add income_tax double,add net_pay double after salary;
+   describe employee_payroll_table;
