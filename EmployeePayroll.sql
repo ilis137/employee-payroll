@@ -23,6 +23,16 @@ insert into employee_payroll_table
  
  select * from employee_payroll_table;
  
- select * from employee_payroll_table where name='Bill';
+ select salary from employee_payroll_table where name='Bill';
  
  select * from employee_payroll_table where start_date between cast('2018-01-01' as date) and Date(now());
+ 
+ alter table employee_payroll_table add gender varchar(1) after name;
+ 
+ describe employee_payroll_table;
+ 
+ update employee_payroll_table set gender='M' where name='Bill' or name='charlie';
+ 
+ update employee_payroll_table set gender='F' where name='Teresa';
+ 
+ select * from employee_payroll_table ;
