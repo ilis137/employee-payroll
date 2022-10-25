@@ -35,4 +35,6 @@ insert into employee_payroll_table
  
  update employee_payroll_table set gender='F' where name='Teresa';
  
- select * from employee_payroll_table ;
+ select * from employee_payroll_table;
+ 
+  select gender,sum(salary) as salary,min(salary) as minimum_salary,max(salary) as maximum_salary,avg(salary) as average_salary,count(salary) as no_of_employees from employee_payroll_table group by gender;
