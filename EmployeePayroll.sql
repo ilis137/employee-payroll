@@ -20,3 +20,5 @@ describe employee_payroll_table;
 
 insert into employee_payroll_table
  (name,salary,start_date) values("Bill",10000,"2018-01-03"),("Teresa",20000,"2019-11-13"),("Charlie",30000,"2020-05-21");
+ 
+ select * from employee_payroll_table;
