@@ -37,4 +37,9 @@ insert into employee_payroll_table
  
  select * from employee_payroll_table;
  
-  select gender,sum(salary) as salary,min(salary) as minimum_salary,max(salary) as maximum_salary,avg(salary) as average_salary,count(salary) as no_of_employees from employee_payroll_table group by gender;
+  select gender,sum(salary) as total_salary,min(salary) as minimum_salary,max(salary) as maximum_salary,avg(salary) as average_salary,count(salary) as no_of_employees from employee_payroll_table group by gender;
+  
+  alter table employee_payroll_table add phone_number varchar(20),add address varchar(150) default('TBD'),add department varchar(20) not null after salary;
+  
+  describe employee_payroll_table;
+  select * from employee_payroll_table;
